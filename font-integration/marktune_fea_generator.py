@@ -58,10 +58,8 @@ def generate(num_rows: int, step: int, upm: int, step_percent: float) -> str:
     max_value = num_rows * step
     lines = []
 
-
     # ── Automatic Code End marker ─────────────────────────────────────────────
     lines.append("# Automatic Code End\n")
-
 
     # ── Header comment ────────────────────────────────────────────────────────
     lines.append(
@@ -71,13 +69,12 @@ def generate(num_rows: int, step: int, upm: int, step_percent: float) -> str:
         f"  |  max value: {max_value}\n"
     )
 
-
     # ── Mark Filtering Sets ───────────────────────────────────────────────────
     lines.extend(generate_mark_filter_sets())
 
     # ── Lookups ───────────────────────────────────────────────────────────────
     for lookup_name, filter_idx, axis, positive in LOOKUPS:
-        class_name, marks_class, _ = FILTER_DEFS[filter_idx]
+        class_name, marks_class, anchor_glyph = FILTER_DEFS[filter_idx]
         mark_class = "@topMarks" if "top" in marks_class else "@bottomMarks"
 
         lines.append(f"lookup {lookup_name} {{")
@@ -88,8 +85,9 @@ def generate(num_rows: int, step: int, upm: int, step_percent: float) -> str:
             raw_value = row * step
             value = raw_value if positive else -raw_value
             vr = value_record(axis, value)
-            glyph_tokens = " ".join([mark_class] * row)
-            lines.append(f"    pos {glyph_tokens}' {vr};")
+            # marked glyph first with ', then value record, then anchor_glyph × row
+            context_tokens = " ".join([anchor_glyph] * row)
+            lines.append(f"    pos {mark_class}' {vr} {context_tokens};")
 
         lines.append(f"}} {lookup_name};")
         lines.append("")
