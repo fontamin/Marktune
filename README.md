@@ -19,7 +19,6 @@ Marktune currently tries to avoid interfering with text shaping/handling as much
 ## How it works
 
 - Global hotkeys (configurable) trigger insertion of specific marker characters for a "top" or "bottom" group, along axis X or Y (positive/negative).
-- A `reset` hotkey clears the accumulated offset for the current cluster.
 - Text is injected directly at the cursor using OS-level text insertion (via [enigo](https://github.com/enigo-rs/enigo)), not by manipulating the app's internal buffer.
 - Marktune scans backward from the cursor to find the base letter and any existing marker/CGJ sequence, recomputes the offset, and rewrites the cluster.
 
@@ -29,7 +28,7 @@ All shortcuts and marker characters are defined in `config.json`:
 
 - `groups.top` / `groups.bottom`: marker characters (as Unicode code points, e.g. `"U+06DF"`) for the `x`, `x_neg`, `y`, `y_neg` directions of each group.
 - `cgj`: the CGJ character used as a separator (defaults to `U+034F`).
-- `bindings`: list of hotkeys, each mapped to a group + axis, or to the `reset` action.
+- `bindings`: list of hotkeys, each mapped to a group + axis.
 
 Example hotkeys (defaults):
 
