@@ -60,3 +60,4 @@ Support for repositioning dots in decomposed letter structures (in addition to A
 ## License
 
 MIT License - Copyright (c) 2026 fontamin
+This project was built with the help of AI tools (Claude and ChatGPT), used for coding assistance throughout development.
