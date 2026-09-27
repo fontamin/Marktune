@@ -1,7 +1,10 @@
 
 # Marktune
 
-Marktune is an open-source utility for repositioning Arabic diacritics (ḥarakāt) using keyboard shortcuts defined in the app.
+Marktune is an open-source utility for repositioning Arabic diacritics using keyboard shortcuts defined in the app.
+
+<img width="2208" height="1040" alt="Marktune-0 2 0" src="https://github.com/user-attachments/assets/72a8c4f8-d611-4dbf-ba6e-03631e7df16c" />
+
 
 ## Concept
 
