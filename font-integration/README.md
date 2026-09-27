@@ -12,7 +12,7 @@ In your font project, define two glyph classes:
 
 ## Step 2: Add the control glyphs
 
-Make sure the following **control glyphs** exist in the font. These are the invisible marks Marktune actually inserts into the text to trigger the shift.
+Make sure the following **control glyphs** exist in the font.(you can copy them from ControlMarksTemplate.glyphs file in this folder) These are the invisible marks Marktune actually inserts into the text to trigger the shift.
 
 | Glyph name | Default Unicode |
 |---|---|
