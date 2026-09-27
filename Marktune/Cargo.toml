@@ -1,0 +1,42 @@
+[package]
+name = "marktune"
+version = "0.2.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.89"
+serde = { version = "1.0.210", features = ["derive"] }
+serde_json = "1.0.128"
+enigo = "0.2.1"
+winit = "0.30.5"
+tray-icon = "0.25.1"
+resvg = "0.45"
+usvg = "0.45"
+rfd = "0.15"
+
+[target.'cfg(not(windows))'.dependencies]
+global-hotkey = "0.6.1"
+
+[target.'cfg(windows)'.dependencies]
+windows = { version = "0.58", features = [
+    "Win32_Foundation",
+    "Win32_System_LibraryLoader",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_UI_Input_KeyboardAndMouse",
+] }
+
+[package.metadata.packager]
+product_name = "Marktune"
+identifier = "com.marktune.app"
+version = "0.2.0"
+icons = ["assets/marktune.icns"]
+resources = ["config.json", "About.txt"]
+binaries = [
+    { path = "marktune", main = true }
+]
+
+[package.metadata.packager.macos]
+minimum_system_version = "10.13"
+
+[build-dependencies]
+winresource = { version = "0.1" }

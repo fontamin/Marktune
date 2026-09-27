@@ -1,0 +1,71 @@
+{
+  "cgj": "U+034F",
+  "groups": {
+    "top": {
+      "controls": {
+        "x": "U+06DF",
+        "x_neg": "U+06E0",
+        "y": "U+06EB",
+        "y_neg": "U+06EC"
+      }
+    },
+    "bottom": {
+      "controls": {
+        "x": "U+08ED",
+        "x_neg": "U+08EE",
+        "y": "U+08EF",
+        "y_neg": "U+08F2"
+      }
+    }
+  },
+  "bindings": [
+    {
+      "name": "top_x_pos",
+      "hotkey": "Ctrl+Alt+Right",
+      "group": "top",
+      "axis": "x"
+    },
+    {
+      "name": "top_x_neg",
+      "hotkey": "Ctrl+Alt+Left",
+      "group": "top",
+      "axis": "x_neg"
+    },
+    {
+      "name": "top_y_pos",
+      "hotkey": "Ctrl+Alt+Up",
+      "group": "top",
+      "axis": "y"
+    },
+    {
+      "name": "top_y_neg",
+      "hotkey": "Ctrl+Alt+Down",
+      "group": "top",
+      "axis": "y_neg"
+    },
+    {
+      "name": "bottom_x_pos",
+      "hotkey": "Ctrl+Alt+Shift+Right",
+      "group": "bottom",
+      "axis": "x"
+    },
+    {
+      "name": "bottom_x_neg",
+      "hotkey": "Ctrl+Alt+Shift+Left",
+      "group": "bottom",
+      "axis": "x_neg"
+    },
+    {
+      "name": "bottom_y_pos",
+      "hotkey": "Ctrl+Alt+Shift+Up",
+      "group": "bottom",
+      "axis": "y"
+    },
+    {
+      "name": "bottom_y_neg",
+      "hotkey": "Ctrl+Alt+Shift+Down",
+      "group": "bottom",
+      "axis": "y_neg"
+    }
+  ]
+}
