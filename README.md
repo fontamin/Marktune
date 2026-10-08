@@ -48,7 +48,7 @@ The app runs as a system tray/menu bar utility (no visible window), with options
 
 ## Building
 
-Requires Rust (edition 2021). Build with:
+Requires Rust (edition 2021). Build with:<br>
 windows and mac(arm64):
 ```
 cargo build --release
