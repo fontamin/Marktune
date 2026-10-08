@@ -49,8 +49,15 @@ The app runs as a system tray/menu bar utility (no visible window), with options
 ## Building
 
 Requires Rust (edition 2021). Build with:
+windows and mac(arm64):
 ```
 cargo build --release
+```
+mac(Universal):
+```
+cd /Users/amin/Marktune
+chmod +x bundle.sh
+./bundle.sh
 ```
 
 ## Roadmap
